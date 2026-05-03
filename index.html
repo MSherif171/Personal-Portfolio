@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" type="image/png" href="Favicon.png">
 <head>
+  <link rel="icon" type="image/png" href="Favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Mohamed Fawzi – Aerospace Engineer, FSTD Support Engineer, UKSEDS Competitions Director, Sir Arthur Clarke Award Winner. Explore portfolio, projects, and CV.">
@@ -30,7 +30,6 @@
       padding: 0 1.5rem;
     }
 
-    /* header / nav */
     header {
       background: #0f172a;
       color: white;
@@ -69,7 +68,6 @@
     .nav-links a:hover {
       color: #60a5fa;
     }
-    /* buttons & sections */
     .btn {
       display: inline-block;
       background: #2563eb;
@@ -187,12 +185,46 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    .publication-card p, .project-card p {
-      font-size: 0.9rem;
-      color: #334155;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    hr {
-      margin: 1rem 0;
+    .gallery-item {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -12px rgba(0,0,0,0.15);
+    }
+    .gallery-media {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+    .gallery-caption {
+      padding: 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1e293b;
+      border-top: 1px solid #eef2ff;
+      background: #ffffff;
+    }
+    .gallery-caption p {
+      font-size: 0.8rem;
+      color: #475569;
+      margin-top: 0.25rem;
     }
     @media (max-width: 768px) {
       .navbar {
@@ -204,6 +236,9 @@
       }
       .section-title {
         font-size: 1.6rem;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       }
     }
   </style>
@@ -271,6 +306,28 @@
         </div>
       </div>
     </div>
+    <!-- New card: AsteriA – CubeSat AOCS -->
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="card">
+        <div class="badge">AsteriA – Student CubeSat Programme</div>
+        <h3>Orbits Team · AOCS Engineer</h3>
+        <p style="margin: 0.5rem 0 0.25rem; font-weight:500;">University of Edinburgh (Remote) · 2020–2021</p>
+        <ul style="margin-top: 0.75rem; padding-left: 1.2rem; color: #334155;">
+          <li>Was part of the Orbital team as an AOCS Engineer in AsteriA responsible for attitude determination, orbital manoeuvres, and orientation of the satellite in orbit.</li>
+          <li>Developed MATLAB scripts to calculate on‑orbit attitude, ensuring no additional adjustments would be needed.</li>
+          <li>Studied and evaluated AOCS hardware: ion thrusters, electrodeless plasma thrusters, sun sensors, star trackers, and the practicality of each for CubeSat constraints.</li>
+          <li>Used simulation tools such as GMAT and STK to model orbital period, altitude, and pointing accuracy.</li>
+          <li>Explored advanced AOCS concepts, including using a solar sail as a primary actuator for lunar CubeSats where magnetorquers are ineffective due to the lack of a magnetic field.</li>
+          <li>The project was ultimately discontinued due to COVID‑related funding challenges, but the experience provided invaluable hands‑on exposure to CubeSat AOCS design and simulation.</li>
+        </ul>
+        <div style="margin-top: 1rem;">
+          <span class="skill-tag">AOCS/GNC</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">GMAT / STK</span>
+          <span class="skill-tag">CubeSat</span>
+          <span class="skill-tag">Attitude determination</span>
+        </div>
+       </div>
   </section>
 
   <!-- UKSEDS Leadership & Competitions -->
@@ -287,7 +344,7 @@
           <li>Led competition days at Airbus Stevenage & RAL Space Harwell: live vibration/TVAC campaigns, RF verification, functional tests against acceptance criteria.</li>
           <li>Reviewed student team designs, embedded code, testing protocols — ensured industry-standard system engineering.</li>
         </ul>
-		<a href="UKSEDS Competitions Sponsorship Brochure 22_23.pdf" class="btn" download="UKSEDS Competitions Sponsorship Brochure 22_23.pdf">🏆 Checkout The Competitions I Organised (PDF)</a> 
+        <a href="UKSEDS Competitions Sponsorship Brochure 22_23.pdf" class="btn" download="UKSEDS Competitions Sponsorship Brochure 22_23.pdf">🏆 Checkout The Competitions I Organised (PDF)</a>
       </div>
       <div class="card">
         <div class="badge">Interim ORT Team Lead</div>
@@ -304,7 +361,7 @@
     </div>
     <div style="margin-top: 1.5rem; background: #eef2ff; border-radius: 1rem; padding: 1.5rem;">
       <h3><i class="fas fa-medal"></i> <a href="https://www.bis-space.com/what-we-do/honours-and-awards/arthurs" target="_blank">Sir Arthur Clarke Award 2022-2023</a></h3>
-      <p><strong>Space Achievement – Student category</strong>, awarded at the Reinventing Space Conference, Liverpool. Recognised for “running UKSEDS’ national space competitions, supporting students’ skills development and industry exposure.” Amongst finalists from across the UK space sector. [reference:0][reference:1]</p>
+      <p><strong>Space Achievement – Student category</strong>, awarded at the Reinventing Space Conference, Liverpool. Recognised for “running UKSEDS’ national space competitions, supporting students’ skills development and industry exposure.” Amongst finalists from across the UK space sector.</p>
     </div>
   </section>
 
@@ -319,7 +376,7 @@
         <p>A research report on centre shift, compliance and stiffness of Cross-Spring and Butterfly flexure pivots. Performed nonlinear FEA in Abaqus, developed MATLAB code to analyse centre of rotation shift, eigenscrew decomposition for stiffness characterisation. Compared with literature for precision pointing applications for satellites.</p>
         <p><strong>Keywords:</strong> Compliant mechanisms, finite element analysis, centre shift, space mechanisms, eigenwrenches/eigentwists.</p>
         <div><span class="skill-tag">Abaqus FEA</span><span class="skill-tag">MATLAB</span><span class="skill-tag">Nonlinear analysis</span><span class="skill-tag">Space pointing</span></div>
-	<a href="Mohamed_Report_Paper.pdf" class="btn" download="Mohamed_Report_Paper.pdf">📘 Read my Flexure Pivot Paper (PDF)</a>
+        <a href="Mohamed_Report_Paper.pdf" class="btn" download="Mohamed_Report_Paper.pdf">📘 Read my Flexure Pivot Paper (PDF)</a>
       </div>
       <div class="card">
         <div class="project-icon"><i class="fas fa-plane"></i></div>
@@ -327,7 +384,7 @@
         <h3>Regional turboprop landing gear design</h3>
         <p>Designed tricycle landing gear for 120-passenger regional aircraft (Falco). Defined MLG/NLG geometry, tyre sizing (GoodYear catalogue), shock absorber simulation, tail strike & turnover angles. Integrated within wing box, load distribution (95% MLG), ICAO Code C compliance. Performed stress analysis and material trade-offs.</p>
         <div><span class="skill-tag">Landing gear kinematics</span><span class="skill-tag">FEA stress</span><span class="skill-tag">Aircraft design</span><span class="skill-tag">CAD integration</span></div>
-	<a href="FW5_FEDR_AVDASI4_compressed.pdf" class="btn" download="FW5_FEDR_AVDASI4_compressed.pdf">✈️ See the FEDR of Falco (PDF)</a>
+        <a href="FW5_FEDR_AVDASI4_compressed.pdf" class="btn" download="FW5_FEDR_AVDASI4_compressed.pdf">✈️ See the FEDR of Falco (PDF)</a>
       </div>
       <div class="card">
         <div class="project-icon"><i class="fas fa-microchip"></i></div>
@@ -344,7 +401,7 @@
         <div><span class="skill-tag">Python / Scikit-learn</span><span class="skill-tag">Satellite data</span><span class="skill-tag">ML Ops</span><span class="skill-tag">Data science</span></div>
       </div>
     </div>
-  </section>	  
+  </section>
   <!-- Skills & certifications -->
   <section>
     <h2 class="section-title">Technical toolkit & certifications</h2>
@@ -354,19 +411,19 @@
         <div>
           <span class="skill-tag">Abaqus FEA</span> <span class="skill-tag">Ansys</span> <span class="skill-tag">MATLAB/Python</span>
           <span class="skill-tag">SolidWorks</span> <span class="skill-tag">Fusion 360</span> <span class="skill-tag">Inventor</span>
-          <span class="skill-tag">CATIA basics</span> <span class="skill-tag">Simulink</span> <span class="skill-tag">LaTeX</span>
+          <span class="skill-tag">CATIA basics</span> <span class="skill-tag">Simulink</span> <span class="skill-tag">LaTeX</span> <span class="skill-tag">C#/C++</span>
         </div>
         <h3 style="margin-top: 1rem;">Systems & simulation</h3>
         <div>
           <span class="skill-tag">Flight simulators (FFS/FTD)</span> <span class="skill-tag">QTG</span>
           <span class="skill-tag">GPIO / MPIC</span> <span class="skill-tag">Motion platforms</span>
-          <span class="skill-tag">Avionics integration</span> <span class="skill-tag">CAN / Ethernet</span>
+          <span class="skill-tag">Avionics integration</span> <span class="skill-tag">Communication Protocols</span>
         </div>
       </div>
       <div class="card">
         <h3>Certifications & awards</h3>
         <ul style="margin-left: 1rem;">
-          <li>🏅 Sir Arthur Clarke Award – Space Achievement Student (2022-2023)</li>
+          <li>🏅 Sir Arthur Clarke Award: Space Achievement - Student (2022-2023)</li>
           <li><img src="uae-flag.png" alt="UAE flag" style="width: 1.2em; height: auto; vertical-align: middle;"> UAE Golden Visa holder</li>
           <li>📜 First-Aid Certified, BSAC Diver</li>
         </ul>
@@ -374,15 +431,13 @@
         <p>Nonlinear FEA | Control systems | Systems integration | Project leadership | Regulatory compliance (EASA/GCAA/FAA) | Hardware/software debugging | Technical writing | Public speaking</p>
       </div>
     </div>
-  </section>
-
   <!-- Contact section -->
   <section id="contact">
     <h2 class="section-title">Let’s connect</h2>
     <div class="card" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
       <div>
         <p><i class="fas fa-envelope"></i> mohd.sherif2001@gmail.com</p>
-        <p><i class="fab fa-linkedin"></i> linkedin.com/in/mohamedfawzi1</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/mohamedfawzi1" target="_blank" style="color: #2563eb; text-decoration: none;">linkedin.com/in/mohamedfawzi1</a></p>
         <p><i class="fas fa-phone-alt"></i> +971 569071649</p>
       </div>
       <div>
